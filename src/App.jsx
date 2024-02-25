@@ -191,7 +191,7 @@ export default function App() {
                   <div className="text-4xl font-extrabold  ">{countUniqueWords(text)}</div>
                 </div>
               </div>
-              <div className=" text-center w-full h-full bg-zinc-600 rounded-2xl text-sm  flex flex-col text-white/60 items-center justify-center   ">
+              <div className=" text-center w-full h-full bg-zinc-600 rounded-2xl text-sm  flex flex-col text-white/60 items-center justify-center md:p-0 p-6 ">
                 {text.split("").length > 2 ?
                   <>
                     <div className="px-6 py-4 border-b text-sm font-semibold w-full ">
