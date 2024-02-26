@@ -1,5 +1,10 @@
 {
   "name": "karekter-sayaci",
+  "author": {
+    "name": "Serkan Yalcinkaya",
+    "email": "syalcinkaya895@gmail.com",
+    "url": "https://github.com/srkanyalcinkaya"
+  },
   "private": true,
   "version": "0.0.0",
   "type": "module",
