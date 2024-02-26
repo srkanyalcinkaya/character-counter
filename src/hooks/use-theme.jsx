@@ -26,7 +26,7 @@ export default function useTheme() {
         },
 
     ]
-    const [theme, setTheme] = useState(localStorage.getItem("@theme") || "system");
+    const [theme, setTheme] = useState(localStorage.getItem("@theme") || "dark");
     const element = document.documentElement;
     const darkQuery = window.matchMedia("(prefers-color-scheme: dark)");
 
