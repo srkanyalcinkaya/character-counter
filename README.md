@@ -12,7 +12,7 @@ CharacterCheck is a lightweight and intuitive text analysis tool for counting ch
 
 ## Getting Started
 
-To start using CharacterCheck, simply [visit our website](https://www.example.com/charactercheck) and enter your text in the provided input field. Alternatively, you can clone this repository and open the `index.html` file in your web browser.
+To start using CharacterCheck, simply [visit our website](https://charactercheck.vercel.app/) and enter your text in the provided input field. Alternatively, you can clone this repository and open the `index.html` file in your web browser.
 
 ## Contributions
 
