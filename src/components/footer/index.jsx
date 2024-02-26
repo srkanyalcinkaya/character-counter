@@ -1,18 +1,33 @@
 import React from "react"
 
 export default function Footer() {
+    
+    let year = new Date().getFullYear()
     return (
-        <footer className=" pt-10 pb-20 bg-black/50  rounded border-t-[1px] border-white/10 ">
-            <div className="grid grid-flow-col gap-4">
-                <a href="#" className="link link-hover">Gizlilik Politikası</a>
-                <a href="#" className="link link-hover">Kullanım Koşulları</a>
-            </div>
-            <div>
-                <p>
-                    <a className="link link-hover" href="#">Character Counter</a>
-                </p>
+
+
+        <footer className="bg-white rounded-lg shadow m-4 dark:bg-zinc-600">
+            <div className="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between">
+                <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">© {year} <a href="https://github.com/srkanyalcinkaya" className="hover:underline">CharacterCheck™</a>. All Rights Reserved.
+                </span>
+                {/* <ul className="flex flex-wrap items-center mt-3 text-sm font-medium text-gray-500 dark:text-gray-400 sm:mt-0">
+                    <li>
+                        <a href="#" className="hover:underline me-4 md:me-6">About</a>
+                    </li>
+                    <li>
+                        <a href="#" className="hover:underline me-4 md:me-6">Privacy Policy</a>
+                    </li>
+                    <li>
+                        <a href="#" className="hover:underline me-4 md:me-6">Licensing</a>
+                    </li>
+                    <li>
+                        <a href="#" className="hover:underline">Contact</a>
+                    </li>
+                </ul> */}
             </div>
         </footer>
+
+
 
     )
 }
