@@ -150,6 +150,8 @@ export default function App() {
   }
 
 
+  
+
 
   return (
     <>
@@ -160,35 +162,35 @@ export default function App() {
           <div className="flex flex-col gap-6">
             <div className="flex bg-zinc-600 rounded-2xl ">
               <div className="py-4 px-6 text-center w-full">
-                <div className="text-sm text-white/60">Karakter</div>
-                <div className="text-4xl font-extrabold  ">{characterCounter(text)}</div>
+                <div className="text-sm text-white/60 ">Karakter</div>
+                <div className="text-4xl font-extrabold  text-white  ">{characterCounter(text)}</div>
               </div>
               <div className="py-4 px-6 text-center w-full border-x-[1px] border-white-10">
-                <div className="text-sm text-white/60">Kelime</div>
-                <div className="text-4xl font-extrabold  ">{wordCount(text)}</div>
+                <div className="text-sm text-white/60 ">Kelime</div>
+                <div className="text-4xl font-extrabold  text-white  ">{wordCount(text)}</div>
               </div>
               <div className="py-4 px-6 text-center w-full border-r-[1px] border-white-10">
-                <div className="text-sm text-white/60">Paragraf</div>
-                <div className="text-4xl font-extrabold  ">{paragraphCount(text)}</div>
+                <div className="text-sm text-white/60 ">Paragraf</div>
+                <div className="text-4xl font-extrabold  text-white  ">{paragraphCount(text)}</div>
               </div>
               <div className="py-4 px-6 text-center w-full">
-                <div className="text-sm text-white/60">Cümle</div>
-                <div className="text-4xl font-extrabold  ">{sentenceCount(text)}</div>
+                <div className="text-sm text-white/60  ">Cümle</div>
+                <div className="text-4xl font-extrabold  text-white  ">{sentenceCount(text)}</div>
               </div>
             </div>
             <div className="w-full ">
-              <textarea name="text" className="w-full bg-zinc-600 rounded-2xl placeholder:text-white/60 p-4 border-[1px] border-white/10 min-h-12 placeholder:text-sm focus:outline-white/60     " value={text} onChange={(e) => setText(e.target.value)} id="text" rows="7" placeholder="Metninizi buraya yazın veya kopyalayıp yapıştırın."></textarea>
+              <textarea name="text" className="w-full bg-zinc-600 rounded-2xl dark:placeholder:text-white/60 text-white  p-4 border-[1px] border-white/10 min-h-12 placeholder:text-sm focus:outline-white/60     " value={text} onChange={(e) => setText(e.target.value)} id="text" rows="7" placeholder="Metninizi buraya yazın veya kopyalayıp yapıştırın."></textarea>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               <div className="bg-zinc-600 rounded-2xl">
                 <div className="py-4 px-6 text-center w-full  ">
                   <div className="text-sm text-white/60">Boşluksuz Karakter</div>
-                  <div className="text-4xl font-extrabold  ">{countNonSpaceCharacters(text)}</div>
+                  <div className="text-4xl font-extrabold  text-white ">{countNonSpaceCharacters(text)}</div>
                 </div>
                 <div className="h-[1px] w-full bg-white/40" />
                 <div className="py-4 px-6 text-center w-full ">
                   <div className="text-sm text-white/60">Benzersiz Kelime</div>
-                  <div className="text-4xl font-extrabold  ">{countUniqueWords(text)}</div>
+                  <div className="text-4xl font-extrabold  text-white ">{countUniqueWords(text)}</div>
                 </div>
               </div>
               <div className=" text-center w-full h-full bg-zinc-600 rounded-2xl text-sm  flex flex-col text-white/60 items-center justify-center md:p-0 p-6 ">
@@ -222,51 +224,51 @@ export default function App() {
               <div className="bg-zinc-600 rounded-2xl">
                 <div className="py-4 px-6 text-center w-full  ">
                   <div className="text-sm text-white/60">Okuma Süresi</div>
-                  <div className="text-4xl font-extrabold  ">{calculateReadingTime(text)} Dakika</div>
+                  <div className="text-4xl font-extrabold  text-white ">{calculateReadingTime(text)} Dakika</div>
                 </div>
                 <div className="h-[1px] w-full bg-white/40" />
                 <div className="py-4 px-6 text-center w-full ">
                   <div className="text-sm text-white/60">Konuşma Süresi</div>
-                  <div className="text-4xl font-extrabold  ">{calculateSpeakingTime(text)} Dakika</div>
+                  <div className="text-4xl font-extrabold  text-white ">{calculateSpeakingTime(text)} Dakika</div>
                 </div>
               </div>
             </div>
             <div className="flex justify-center mt-12" >
               <article className="prose max-w-full">
-                <h2 className="text-2xl text-white/80 mb-4 ">Karakter Sayısı Nedir?</h2>
-                <p className="text-base text-white/50 mb-2">Karakter sayısı, bir metindeki boşluklar ve diğer özel karakterler dahil tüm karakterlerin toplam sayısıdır.
+                <h2 className="text-2xl dark:text-white/80 text-black/80 mb-4 font-bold ">Karakter Sayısı Nedir?</h2>
+                <p className="text-base text-black/50 dark:text-white/50 mb-2">Karakter sayısı, bir metindeki boşluklar ve diğer özel karakterler dahil tüm karakterlerin toplam sayısıdır.
                   Çoğunlukla bir metin veya dökümanın belirli miktarda karaktere sahip olmasının sağlanması için karakter sayısını
                   bilmek gerekmektedir.</p>
-                <p className="text-base text-white/50 mb-2">Karakter sayısı özellikle çeviri sektöründe sıklıkla kullanılmaktadır. Günümüzde birçok çevirmen, bir çevirinin
+                <p className="text-base text-black/50 dark:text-white/50 mb-2">Karakter sayısı özellikle çeviri sektöründe sıklıkla kullanılmaktadır. Günümüzde birçok çevirmen, bir çevirinin
                   maliyetini boşluksuz karakter sayısı üzerinden hesaplamaktadır.</p>
-                <h2 className="text-2xl text-white/80 mb-4 ">Kelime Sayısı ile Karakter Sayısı Arasındaki Fark Nedir?</h2>
-                <p className="text-base text-white/50 mb-2">Kelime sayısı bir metindeki kelimelerin toplam sayısıdır. Diğer yandan karakter sayısı ise bir metindeki tüm
+                <h2 className="text-2xl dark:text-white/80 text-black/80 mb-4 font-bold ">Kelime Sayısı ile Karakter Sayısı Arasındaki Fark Nedir?</h2>
+                <p className="text-base text-black/50 dark:text-white/50 mb-2">Kelime sayısı bir metindeki kelimelerin toplam sayısıdır. Diğer yandan karakter sayısı ise bir metindeki tüm
                   karakterlerin toplam sayısıdır. Bir metinde kaç karakter olduğunu öğrenmek istiyorsanız, özel karakterler dahil
                   tüm karakterleri saymanız gerekir.</p>
-                <h2 className="text-2xl text-white/80 mb-4 ">Karakterleri Nasıl Sayarsınız?</h2>
-                <p className="text-base text-white/50 mb-2">Metindeki karakter sayısını bulmak için belgenizi Word veya LibreOffice ile açabilir, bu programların istatistik
+                <h2 className="text-2xl dark:text-white/80 text-black/80 mb-4 font-bold ">Karakterleri Nasıl Sayarsınız?</h2>
+                <p className="text-base text-black/50 dark:text-white/50 mb-2">Metindeki karakter sayısını bulmak için belgenizi Word veya LibreOffice ile açabilir, bu programların istatistik
                   araçları ile karakter sayısını öğrenebilirsiniz. Alternatif olarak, karakter sayısını saymak için Karakter Sayacı
                   gibi çevrimiçi bir araç kullanabilirsiniz.</p>
-                <h2 className="text-2xl text-white/80 mb-4 ">Karakter Sayısı Boşlukları İçerir mi?</h2>
-                <p className="text-base text-white/50 mb-2">Evet. Boşluksuz karakter sayısı, karakter sayısından farklı olan başka bir ölçüdür.</p>
-                <h2 className="text-2xl text-white/80 mb-4 ">Online Karakter Sayma Nasıl Yapılır?</h2>
-                <p className="text-base text-white/50 mb-2">Karakter Sayacı ile online karakter sayısı bulma işlemini, kolay ve ücretsiz olarak gerçekleştirebilirsiniz.</p>
-                <h2 className="text-2xl text-white/80 mb-4 ">Karakter Sayacı Nedir?</h2>
-                <p className="text-base text-white/50 mb-2">Karakter Sayacı, kullanımı basit ve ücretsiz olan online karakter sayısı hesaplama aracıdır. Bu aracı kullanarak
+                <h2 className="text-2xl dark:text-white/80 text-black/80 mb-4 font-bold ">Karakter Sayısı Boşlukları İçerir mi?</h2>
+                <p className="text-base text-black/50 dark:text-white/50 mb-2">Evet. Boşluksuz karakter sayısı, karakter sayısından farklı olan başka bir ölçüdür.</p>
+                <h2 className="text-2xl dark:text-white/80 text-black/80 mb-4 font-bold ">Online Karakter Sayma Nasıl Yapılır?</h2>
+                <p className="text-base text-black/50 dark:text-white/50 mb-2">Karakter Sayacı ile online karakter sayısı bulma işlemini, kolay ve ücretsiz olarak gerçekleştirebilirsiniz.</p>
+                <h2 className="text-2xl dark:text-white/80 text-black/80 mb-4 font-bold ">Karakter Sayacı Nedir?</h2>
+                <p className="text-base text-black/50 dark:text-white/50 mb-2">Karakter Sayacı, kullanımı basit ve ücretsiz olan online karakter sayısı hesaplama aracıdır. Bu aracı kullanarak
                   Twitter karakter sayısı hesaplama gibi işlemleri hızlı biçimde yapabilirsiniz.</p>
-                <h2 className="text-2xl text-white/80 mb-4 ">Karakter Sayacı Nasıl Kullanılır?</h2>
-                <p className="text-base text-white/50 mb-2">Metninizi üstteki kutuya yazın veya kopyalayıp yapıştırın. Ardından, Karakter Sayacı size boşluklu veya boşluksuz
-                  karakter sayısı ile metindeki <a href="/tr/word-counter/">kelime sayısı</a>nı gösterecektir.</p>
-                <h2 className="text-2xl text-white/80 mb-4 ">Mac için Word'de Karakter Sayımını Nasıl Yaparım?</h2>
-                <p className="text-base text-white/50 mb-2">Uygulama ekranının altında bulabileceğiniz durum çubuğunda yer alan sözcük sayımına tıklayıp, Karakter
+                <h2 className="text-2xl dark:text-white/80 text-black/80 mb-4 font-bold ">Karakter Sayacı Nasıl Kullanılır?</h2>
+                <p className="text-base text-black/50 dark:text-white/50 mb-2">Metninizi üstteki kutuya yazın veya kopyalayıp yapıştırın. Ardından, Karakter Sayacı size boşluklu veya boşluksuz
+                  karakter sayısı ile metindeki kelime sayısını gösterecektir.</p>
+                <h2 className="text-2xl dark:text-white/80 text-black/80 mb-4 font-bold ">Mac için Word'de Karakter Sayımını Nasıl Yaparım?</h2>
+                <p className="text-base text-black/50 dark:text-white/50 mb-2">Uygulama ekranının altında bulabileceğiniz durum çubuğunda yer alan sözcük sayımına tıklayıp, Karakter
                   (boşluksuz) ve Karakter (boşluklu) sayılarını görebilirsiniz.</p>
-                <h2 className="text-2xl text-white/80 mb-4 ">Bir Mesaj Metni Kaç Karakterdir?</h2>
-                <p className="text-base text-white/50 mb-2">Tek bir SMS için karakter sınırı 160 karakterdir.</p>
-                <h2 className="text-2xl text-white/80 mb-4 ">Twitter Karakter Sınırı Kaç?</h2>
-                <p className="text-base text-white/50 mb-2">Eskiden bir tweet en fazla 140 karakterden oluşabilmekteydi. Ancak, 2023 yılında bir tweet en fazla 280
+                <h2 className="text-2xl dark:text-white/80 text-black/80 mb-4 font-bold ">Bir Mesaj Metni Kaç Karakterdir?</h2>
+                <p className="text-base text-black/50 dark:text-white/50 mb-2">Tek bir SMS için karakter sınırı 160 karakterdir.</p>
+                <h2 className="text-2xl dark:text-white/80 text-black/80 mb-4 font-bold ">Twitter Karakter Sınırı Kaç?</h2>
+                <p className="text-base text-black/50 dark:text-white/50 mb-2">Eskiden bir tweet en fazla 140 karakterden oluşabilmekteydi. Ancak, 2023 yılında bir tweet en fazla 280
                   karakterden oluşabilmektedir.</p>
-                <h2 className="text-2xl text-white/80 mb-4 ">Her Sosyal Ağ için Maksimum Karakter Sayısı Kaç?</h2>
-                <p className="text-base text-white/50 mb-2">Sosyal ağlar için maksimum karakter sayıları:</p>
+                <h2 className="text-2xl dark:text-white/80 text-black/80 mb-4 font-bold ">Her Sosyal Ağ için Maksimum Karakter Sayısı Kaç?</h2>
+                <p className="text-base text-black/50 dark:text-white/50 mb-2">Sosyal ağlar için maksimum karakter sayıları:</p>
                 <ul className="text-base text-white/50 mb-2 flex-col flex space-y-2 list-disc   ">
                   <li>Facebook: 63206 - bir gönderi için</li>
                   <li>Instagram: 2200 - bir gönderi için</li>
